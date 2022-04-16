@@ -11,11 +11,12 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("mavenPub") {
-                groupId = LibraryInfo.group
+            create<MavenPublication>("library") {
+                from(components["java"])
                 group = LibraryInfo.group
-                artifactId = LibraryInfo.artifactId
+                groupId = LibraryInfo.group
                 version = LibraryInfo.version
+                artifactId = LibraryInfo.artifactId
 
                 pom {
                     name.set(LibraryInfo.artifactId)
@@ -50,5 +51,5 @@ object LibraryInfo {
     const val displayName = "Jitpack Test"
     const val group = "com.tkhskt.jitpacktest"
     const val url = "https://github.com/tkhskt/jitpack-test"
-    const val version = "1.0.1"
+    const val version = "1.0.5"
 }
