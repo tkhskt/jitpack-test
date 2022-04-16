@@ -12,6 +12,7 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("mavenPub") {
+                groupId = LibraryInfo.group
                 group = LibraryInfo.group
                 artifactId = LibraryInfo.artifactId
                 version = LibraryInfo.version
