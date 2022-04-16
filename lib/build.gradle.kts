@@ -12,19 +12,19 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("mavenPub") {
-                group = PluginInfo.group
-                artifactId = PluginInfo.artifactId
-                version = PluginInfo.version
+                group = LibraryInfo.group
+                artifactId = LibraryInfo.artifactId
+                version = LibraryInfo.version
 
                 pom {
-                    name.set(PluginInfo.artifactId)
-                    description.set(PluginInfo.description)
-                    url.set(PluginInfo.url)
+                    name.set(LibraryInfo.artifactId)
+                    description.set(LibraryInfo.description)
+                    url.set(LibraryInfo.url)
 
                     scm {
                         connection.set("scm:git@github.com:tkhskt/jitpack-test.git")
                         developerConnection.set("scm:git@github.com:tkhskt/jitpack-test.git")
-                        url.set(PluginInfo.url)
+                        url.set(LibraryInfo.url)
                     }
 
                     developers {
@@ -40,10 +40,10 @@ afterEvaluate {
 }
 
 project(":lib") {
-    version = PluginInfo.version
+    version = LibraryInfo.version
 }
 
-object PluginInfo {
+object LibraryInfo {
     const val artifactId = "jitpack-test"
     const val description = "Jitpack Test"
     const val displayName = "Jitpack Test"
