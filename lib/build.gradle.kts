@@ -50,5 +50,5 @@ object LibraryInfo {
     const val displayName = "Jitpack Test"
     const val group = "com.tkhskt.jitpacktest"
     const val url = "https://github.com/tkhskt/jitpack-test"
-    const val version = "1.0.0"
+    const val version = "1.0.1"
 }
